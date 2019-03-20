@@ -7,4 +7,4 @@
 
 <p>Example REST API with nodeJS, MongoDB, and JsonWebToken (JWT)</p>
 
-<span>By: Ugi Ispoyo Widodo</span>
+<span><b>By: Ugi Ispoyo Widodo</b></span>
