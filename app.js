@@ -16,7 +16,7 @@ const productRoutes = require('./api/routes/products');
 //     console.log("Connect to database succesfully!");
 //     db.close();
 // });
-const database = 'chat-rs'
+const database = 'toko-online'
 const urlDatabase = `mongodb://localhost:27017/${database}`;
 mongoose.connect(`${urlDatabase}`, { useNewUrlParser: true })
     .then(() => {
