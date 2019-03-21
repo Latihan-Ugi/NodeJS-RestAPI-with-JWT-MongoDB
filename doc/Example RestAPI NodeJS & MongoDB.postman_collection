@@ -1,0 +1,172 @@
+{
+	"id": "ccf0786a-3959-232a-9183-b6c3fd46f88d",
+	"name": "Example RestAPI NodeJS & MongoDB",
+	"description": "",
+	"order": [
+		"6a1866cf-84b1-adfd-1732-d674ca83551d",
+		"fc675005-08a1-0db5-f0a7-296281988517",
+		"01a7e9f7-05e8-bcf0-71d1-29399e1f7d42",
+		"12e2fbfe-efbb-37e6-2705-a718fa19e0ed",
+		"44426468-c194-763a-d6ae-5567f9b07582"
+	],
+	"folders": [],
+	"folders_order": [],
+	"timestamp": 1553172829050,
+	"owner": "834483",
+	"public": false,
+	"requests": [
+		{
+			"id": "01a7e9f7-05e8-bcf0-71d1-29399e1f7d42",
+			"headers": "",
+			"headerData": [],
+			"url": "http://localhost:3000/products?limit=10&offset=0&orderby=desc",
+			"queryParams": [
+				{
+					"key": "limit",
+					"value": "10",
+					"equals": true,
+					"description": "",
+					"enabled": true
+				},
+				{
+					"key": "offset",
+					"value": "0",
+					"equals": true,
+					"description": "",
+					"enabled": true
+				},
+				{
+					"key": "orderby",
+					"value": "desc",
+					"equals": true,
+					"description": "",
+					"enabled": true
+				}
+			],
+			"pathVariables": {},
+			"pathVariableData": [],
+			"preRequestScript": null,
+			"method": "GET",
+			"collectionId": "ccf0786a-3959-232a-9183-b6c3fd46f88d",
+			"data": null,
+			"dataMode": "params",
+			"name": "GET All",
+			"description": "",
+			"descriptionFormat": "html",
+			"time": 1553172892728,
+			"version": 2,
+			"responses": [],
+			"tests": null,
+			"currentHelper": "normal",
+			"helperAttributes": {}
+		},
+		{
+			"id": "12e2fbfe-efbb-37e6-2705-a718fa19e0ed",
+			"headers": "",
+			"headerData": [],
+			"url": "http://localhost:3000/products/5c934717c2bf163eb9cfdeb4",
+			"queryParams": [],
+			"pathVariables": {},
+			"pathVariableData": [],
+			"preRequestScript": null,
+			"method": "DELETE",
+			"collectionId": "ccf0786a-3959-232a-9183-b6c3fd46f88d",
+			"data": null,
+			"dataMode": "params",
+			"name": "Delete Data",
+			"description": "",
+			"descriptionFormat": "html",
+			"time": 1553172905087,
+			"version": 2,
+			"responses": [],
+			"tests": null,
+			"currentHelper": "normal",
+			"helperAttributes": {}
+		},
+		{
+			"id": "44426468-c194-763a-d6ae-5567f9b07582",
+			"headers": "Content-Type: application/json\n",
+			"headerData": [
+				{
+					"key": "Content-Type",
+					"value": "application/json",
+					"description": "",
+					"enabled": true
+				}
+			],
+			"url": "http://localhost:3000/products/5c9387ed7f0a644d8933ef7b",
+			"queryParams": [],
+			"pathVariables": {},
+			"pathVariableData": [],
+			"preRequestScript": null,
+			"method": "PATCH",
+			"collectionId": "ccf0786a-3959-232a-9183-b6c3fd46f88d",
+			"data": [],
+			"dataMode": "raw",
+			"name": "Update Data",
+			"description": "",
+			"descriptionFormat": "html",
+			"time": 1553172918788,
+			"version": 2,
+			"responses": [],
+			"tests": null,
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"rawModeData": "[\n\t{\n\t\t\"propName\": \"price\",\n\t\t\"value\": 450000\n\t},\n\t{\n\t\t\"propName\": \"name\",\n\t\t\"value\": \"Bambang joko\"\n\t}\n]"
+		},
+		{
+			"id": "6a1866cf-84b1-adfd-1732-d674ca83551d",
+			"headers": "Content-Type: application/json\n",
+			"headerData": [
+				{
+					"key": "Content-Type",
+					"value": "application/json",
+					"description": "",
+					"enabled": true
+				}
+			],
+			"url": "http://localhost:3000/products",
+			"queryParams": [],
+			"pathVariables": {},
+			"pathVariableData": [],
+			"preRequestScript": null,
+			"method": "POST",
+			"collectionId": "ccf0786a-3959-232a-9183-b6c3fd46f88d",
+			"data": [],
+			"dataMode": "raw",
+			"name": "ADD Data",
+			"description": "",
+			"descriptionFormat": "html",
+			"time": 1553172859796,
+			"version": 2,
+			"responses": [],
+			"tests": null,
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"rawModeData": "{\n\t\"name\": \"Budi\",\n\t\"price\": 50000\n}"
+		},
+		{
+			"id": "fc675005-08a1-0db5-f0a7-296281988517",
+			"headers": "",
+			"headerData": [],
+			"url": "http://localhost:3000/products/5c9226594398b735dd9f0db3",
+			"queryParams": [],
+			"pathVariables": {},
+			"pathVariableData": [],
+			"preRequestScript": null,
+			"method": "GET",
+			"collectionId": "ccf0786a-3959-232a-9183-b6c3fd46f88d",
+			"data": null,
+			"dataMode": "params",
+			"name": "GET By ID",
+			"description": "",
+			"descriptionFormat": "html",
+			"time": 1553172881327,
+			"version": 2,
+			"responses": [],
+			"tests": null,
+			"currentHelper": "normal",
+			"helperAttributes": {}
+		}
+	]
+}
