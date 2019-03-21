@@ -133,7 +133,7 @@ router.patch('/:id', (req, res, next) => {
 
 router.delete('/:id', (req, res, next) => {
     const id = req.params.id;
-    Product.remove({ _id: id })
+    Product.deleteOne({ _id: id })
         .exec()
         .then(result => {
             res.status(200).json(result);
