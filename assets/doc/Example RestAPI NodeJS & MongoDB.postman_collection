@@ -3,11 +3,11 @@
 	"name": "Example RestAPI NodeJS & MongoDB",
 	"description": "",
 	"order": [
-		"6a1866cf-84b1-adfd-1732-d674ca83551d",
 		"fc675005-08a1-0db5-f0a7-296281988517",
 		"01a7e9f7-05e8-bcf0-71d1-29399e1f7d42",
 		"12e2fbfe-efbb-37e6-2705-a718fa19e0ed",
-		"44426468-c194-763a-d6ae-5567f9b07582"
+		"44426468-c194-763a-d6ae-5567f9b07582",
+		"511cb26a-41f8-2a15-2aff-0540c092c7c9"
 	],
 	"folders": [],
 	"folders_order": [],
@@ -64,24 +64,22 @@
 			"id": "12e2fbfe-efbb-37e6-2705-a718fa19e0ed",
 			"headers": "",
 			"headerData": [],
-			"url": "http://localhost:3000/products/5c934717c2bf163eb9cfdeb4",
+			"url": "http://localhost:3000/products/5c939b6cb30b0e525d6b44fc",
 			"queryParams": [],
+			"preRequestScript": null,
 			"pathVariables": {},
 			"pathVariableData": [],
-			"preRequestScript": null,
 			"method": "DELETE",
-			"collectionId": "ccf0786a-3959-232a-9183-b6c3fd46f88d",
 			"data": null,
 			"dataMode": "params",
-			"name": "Delete Data",
-			"description": "",
-			"descriptionFormat": "html",
-			"time": 1553172905087,
-			"version": 2,
-			"responses": [],
 			"tests": null,
 			"currentHelper": "normal",
-			"helperAttributes": {}
+			"helperAttributes": {},
+			"time": 1553177978436,
+			"name": "Delete Data",
+			"description": "",
+			"collectionId": "ccf0786a-3959-232a-9183-b6c3fd46f88d",
+			"responses": []
 		},
 		{
 			"id": "44426468-c194-763a-d6ae-5567f9b07582",
@@ -115,35 +113,47 @@
 			"rawModeData": "[\n\t{\n\t\t\"propName\": \"price\",\n\t\t\"value\": 450000\n\t},\n\t{\n\t\t\"propName\": \"name\",\n\t\t\"value\": \"Bambang joko\"\n\t}\n]"
 		},
 		{
-			"id": "6a1866cf-84b1-adfd-1732-d674ca83551d",
-			"headers": "Content-Type: application/json\n",
-			"headerData": [
+			"id": "511cb26a-41f8-2a15-2aff-0540c092c7c9",
+			"headers": "",
+			"headerData": [],
+			"url": "http://localhost:3000/products",
+			"queryParams": [],
+			"preRequestScript": null,
+			"pathVariables": {},
+			"pathVariableData": [],
+			"method": "POST",
+			"data": [
 				{
-					"key": "Content-Type",
-					"value": "application/json",
+					"key": "name",
+					"value": "Bambang Judika",
 					"description": "",
+					"type": "text",
+					"enabled": true
+				},
+				{
+					"key": "price",
+					"value": "1223232",
+					"description": "",
+					"type": "text",
+					"enabled": true
+				},
+				{
+					"key": "productImage",
+					"value": "27879980_912976628871383_7844273461336735744_n.png",
+					"description": "",
+					"type": "file",
 					"enabled": true
 				}
 			],
-			"url": "http://localhost:3000/products",
-			"queryParams": [],
-			"pathVariables": {},
-			"pathVariableData": [],
-			"preRequestScript": null,
-			"method": "POST",
-			"collectionId": "ccf0786a-3959-232a-9183-b6c3fd46f88d",
-			"data": [],
-			"dataMode": "raw",
-			"name": "ADD Data",
-			"description": "",
-			"descriptionFormat": "html",
-			"time": 1553172859796,
-			"version": 2,
-			"responses": [],
+			"dataMode": "params",
 			"tests": null,
 			"currentHelper": "normal",
 			"helperAttributes": {},
-			"rawModeData": "{\n\t\"name\": \"Budi\",\n\t\"price\": 50000\n}"
+			"time": 1553177585114,
+			"name": "ADD Data",
+			"description": "",
+			"collectionId": "ccf0786a-3959-232a-9183-b6c3fd46f88d",
+			"responses": []
 		},
 		{
 			"id": "fc675005-08a1-0db5-f0a7-296281988517",
