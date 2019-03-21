@@ -28,6 +28,8 @@ mongoose.connect(`${urlDatabase}`, { useNewUrlParser: true })
 
 
 app.use(morgan('dev'));
+// app.use(express.static('assets'));
+app.use('/assets', express.static('assets'));
 app.use(bodyParser.urlencoded({extended: false}));
 app.use(bodyParser.json());
 

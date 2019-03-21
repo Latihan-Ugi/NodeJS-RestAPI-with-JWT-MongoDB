@@ -3,6 +3,32 @@ const router = express.Router();
 const url = require('url');  
 const querystring = require('querystring');  
 const mongoose = require('mongoose');
+const multer = require('multer');
+
+const storage = multer.diskStorage({
+    destination: function(req, file, cb) {
+        cb(null, './assets/uploads/')
+    },
+    filename: function(req, file, cb) {
+        cb(null, new Date().toISOString() + file.originalname)
+    }
+});
+const fileFilterCek = (req, file, cb) => {
+    /* reject file */
+    if(file.mimetype === 'image/jpeg' || file.mimetype === 'image/png') {
+        cb(null, true);
+    } else {
+        cb(null, false);
+    }
+}
+const upload = multer({
+    storage: storage, 
+    limits: {
+        fileSize: 1024 * 1024 * 5
+    },
+    fileFilter: fileFilterCek
+})
+
 
 const Product = require('./../models/products');
 
@@ -20,8 +46,9 @@ router.get('/', (req, res, next) => {
         orderby = parsedQs.orderby
     }
     /* Count all data */
-    let count = Product.count();
+    let count = Product.countDocuments();
     Product.find()
+        .select('_id name price productImage created_at updated_at')
         .limit(limit)
         .sort({created_at: orderby})
         .skip(offset)
@@ -43,17 +70,18 @@ router.get('/', (req, res, next) => {
         });
 });
 
-router.post('/', (req, res, next) => {
+router.post('/', upload.single('productImage'), (req, res, next) => {
     const product = new Product({
         _id: new mongoose.Types.ObjectId(),
         name: req.body.name,
-        price: req.body.price
+        price: req.body.price,
+        productImage: req.file.path
     })
     product.save()
         .then(result => {
             console.log(result);
             res.status(201).json({
-                message: 'data successful added',
+                message: 'created product successfully',
                 createdProduct: product
             });
         }).catch(e => {
@@ -86,7 +114,9 @@ router.get('/:id', (req, res, next) => {
 
 router.patch('/:id', (req, res, next) => {
     const id = req.params.id;
-    const updateOps = {};
+    const updateOps = {
+        updated_at: new Date()
+    };
     for(const ops of req.body){
         updateOps[ops.propName] = ops.value;
     }
