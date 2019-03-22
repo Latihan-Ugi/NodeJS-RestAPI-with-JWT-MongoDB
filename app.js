@@ -3,11 +3,14 @@ const app = express();
 const morgan = require('morgan');
 const bodyParser = require('body-parser');
 const mongoose = require('mongoose');
+const dotenv = require('dotenv');
+dotenv.config();
 // const MongoClient = require('mongodb').MongoClient;
 
 
 /* Import Routes */
 const productRoutes = require('./api/routes/products');
+const userRoutes = require('./api/routes/user');
 
 
 /* MongoDB Connection */
@@ -16,8 +19,7 @@ const productRoutes = require('./api/routes/products');
 //     console.log("Connect to database succesfully!");
 //     db.close();
 // });
-const database = 'toko-online'
-const urlDatabase = `mongodb://localhost:27017/${database}`;
+const urlDatabase = process.env.URL_DATABASE+process.env.DATABASE_NAME;
 mongoose.connect(`${urlDatabase}`, { useNewUrlParser: true })
     .then(() => {
         console.log('Database connection successful');
@@ -51,6 +53,7 @@ app.use((req, res, next) => {
 
 /* Routes Api */
 app.use('/products', productRoutes);
+app.use('/user', userRoutes);
 
 
 /* Error Handling */

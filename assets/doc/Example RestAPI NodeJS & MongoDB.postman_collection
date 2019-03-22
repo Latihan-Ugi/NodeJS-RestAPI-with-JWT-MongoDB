@@ -7,7 +7,9 @@
 		"01a7e9f7-05e8-bcf0-71d1-29399e1f7d42",
 		"12e2fbfe-efbb-37e6-2705-a718fa19e0ed",
 		"44426468-c194-763a-d6ae-5567f9b07582",
-		"511cb26a-41f8-2a15-2aff-0540c092c7c9"
+		"511cb26a-41f8-2a15-2aff-0540c092c7c9",
+		"ab37d4ff-0ae5-3c29-6f77-0d35cc262fb0",
+		"b318ad2b-a5b2-65ec-d03f-614888f34383"
 	],
 	"folders": [],
 	"folders_order": [],
@@ -17,8 +19,15 @@
 	"requests": [
 		{
 			"id": "01a7e9f7-05e8-bcf0-71d1-29399e1f7d42",
-			"headers": "",
-			"headerData": [],
+			"headers": "Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InRlc3RAdGVzdC5kZXYiLCJ1c2VySWQiOiI1Yzk0YTVmMmFlOTQzYzY0YjkzNmMwMGYiLCJpYXQiOjE1NTMyNTA3NDMsImV4cCI6MTU1MzI1NDM0M30.AFkkBEbuObxFt45_CkrZBcXb19RwqnH9MIykGYTUiD4\n",
+			"headerData": [
+				{
+					"key": "Authorization",
+					"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InRlc3RAdGVzdC5kZXYiLCJ1c2VySWQiOiI1Yzk0YTVmMmFlOTQzYzY0YjkzNmMwMGYiLCJpYXQiOjE1NTMyNTA3NDMsImV4cCI6MTU1MzI1NDM0M30.AFkkBEbuObxFt45_CkrZBcXb19RwqnH9MIykGYTUiD4",
+					"description": "",
+					"enabled": true
+				}
+			],
 			"url": "http://localhost:3000/products?limit=10&offset=0&orderby=desc",
 			"queryParams": [
 				{
@@ -43,22 +52,20 @@
 					"enabled": true
 				}
 			],
+			"preRequestScript": null,
 			"pathVariables": {},
 			"pathVariableData": [],
-			"preRequestScript": null,
 			"method": "GET",
-			"collectionId": "ccf0786a-3959-232a-9183-b6c3fd46f88d",
 			"data": null,
 			"dataMode": "params",
-			"name": "GET All",
-			"description": "",
-			"descriptionFormat": "html",
-			"time": 1553172892728,
-			"version": 2,
-			"responses": [],
 			"tests": null,
 			"currentHelper": "normal",
-			"helperAttributes": {}
+			"helperAttributes": {},
+			"time": 1553251425024,
+			"name": "GET All",
+			"description": "",
+			"collectionId": "ccf0786a-3959-232a-9183-b6c3fd46f88d",
+			"responses": []
 		},
 		{
 			"id": "12e2fbfe-efbb-37e6-2705-a718fa19e0ed",
@@ -114,8 +121,15 @@
 		},
 		{
 			"id": "511cb26a-41f8-2a15-2aff-0540c092c7c9",
-			"headers": "",
-			"headerData": [],
+			"headers": "Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InRlc3RAdGVzdC5kZXYiLCJ1c2VySWQiOiI1Yzk0YTVmMmFlOTQzYzY0YjkzNmMwMGYiLCJpYXQiOjE1NTMyNTA3NDMsImV4cCI6MTU1MzI1NDM0M30.AFkkBEbuObxFt45_CkrZBcXb19RwqnH9MIykGYTUiD4\n",
+			"headerData": [
+				{
+					"key": "Authorization",
+					"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InRlc3RAdGVzdC5kZXYiLCJ1c2VySWQiOiI1Yzk0YTVmMmFlOTQzYzY0YjkzNmMwMGYiLCJpYXQiOjE1NTMyNTA3NDMsImV4cCI6MTU1MzI1NDM0M30.AFkkBEbuObxFt45_CkrZBcXb19RwqnH9MIykGYTUiD4",
+					"description": "",
+					"enabled": true
+				}
+			],
 			"url": "http://localhost:3000/products",
 			"queryParams": [],
 			"preRequestScript": null,
@@ -149,11 +163,69 @@
 			"tests": null,
 			"currentHelper": "normal",
 			"helperAttributes": {},
-			"time": 1553177585114,
+			"time": 1553250820699,
 			"name": "ADD Data",
 			"description": "",
 			"collectionId": "ccf0786a-3959-232a-9183-b6c3fd46f88d",
 			"responses": []
+		},
+		{
+			"id": "ab37d4ff-0ae5-3c29-6f77-0d35cc262fb0",
+			"headers": "Content-Type: application/json\n",
+			"headerData": [
+				{
+					"key": "Content-Type",
+					"value": "application/json",
+					"description": "",
+					"enabled": true
+				}
+			],
+			"url": "http://localhost:3000/user/signup",
+			"queryParams": [],
+			"preRequestScript": null,
+			"pathVariables": {},
+			"pathVariableData": [],
+			"method": "POST",
+			"data": [],
+			"dataMode": "raw",
+			"tests": null,
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"time": 1553246052152,
+			"name": "ADD User",
+			"description": "",
+			"collectionId": "ccf0786a-3959-232a-9183-b6c3fd46f88d",
+			"responses": [],
+			"rawModeData": "{\n\t\"email\": \"test2@test.dev\",\n\t\"password\": \"12345\"\n}"
+		},
+		{
+			"id": "b318ad2b-a5b2-65ec-d03f-614888f34383",
+			"headers": "Content-Type: application/json\n",
+			"headerData": [
+				{
+					"key": "Content-Type",
+					"value": "application/json",
+					"description": "",
+					"enabled": true
+				}
+			],
+			"url": "http://localhost:3000/user/login",
+			"queryParams": [],
+			"preRequestScript": null,
+			"pathVariables": {},
+			"pathVariableData": [],
+			"method": "POST",
+			"data": [],
+			"dataMode": "raw",
+			"tests": null,
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"time": 1553248840699,
+			"name": "LOGIN User",
+			"description": "",
+			"collectionId": "ccf0786a-3959-232a-9183-b6c3fd46f88d",
+			"responses": [],
+			"rawModeData": "{\n\t\"email\": \"test@test.dev\",\n\t\"password\": \"12345\"\n}"
 		},
 		{
 			"id": "fc675005-08a1-0db5-f0a7-296281988517",
